@@ -8,15 +8,15 @@ const NavBar = () => {
     const [navbar, setNavbar] = useState(false)
 
     const navLinks = <>
-        <li><NavLink to='/' className="btn btn-outline btn-default pt-4 border-b-red-800 text-white border-neutral">Home</NavLink></li>
+        <li><NavLink to='/' className="btn btn-outline btn-default pt-4 border-b-red-800 text-white border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Home</NavLink></li>
 
-        <li><NavLink to='/login' className="btn btn-outline btn-default pt-2 border-b-amber-600 border-neutral normal-case text-lg text-white">Login</NavLink></li>
-        <li><NavLink to='/CreateAccount' className="btn btn-outline btn-default pt-2 border-b-amber-300 border-neutral normal-case text-lg text-white">Create Account</NavLink></li>
+        <li><NavLink to='/login' className="btn btn-outline btn-default pt-2 border-b-amber-600 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Login</NavLink></li>
+        <li><NavLink to='/CreateAccount' className="btn btn-outline btn-default pt-2 border-b-amber-300 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Create Account</NavLink></li>
 
     </>
 
     const changeBackground = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 500) {
             setNavbar(true)
         }
         else {

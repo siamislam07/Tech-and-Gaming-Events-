@@ -20,7 +20,7 @@ const Login = () => {
                             <input className="w-9/12 h-10 px-3 mb-2 rounded-md" type="password" name="password" id="user-pass" placeholder="Your password " />
                             <div className="flex items-center justify-center gap-5 mt-7 pb-4">
                                 <button id="btn-submit" className="bg-gray-50 hover:bg-sky-100  px-8 py-2 font-medium rounded-lg  " >Login</button>
-                                <Link to="/register">
+                                <Link to="/CreateAccount">
                                     <button id="btn-submit" className="bg-gray-50 hover:bg-sky-100  px-8 py-2 font-medium rounded-lg  " >Register</button>
                                 </Link>
                             </div>

@@ -3,7 +3,7 @@ const Carousel = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative h-[90vh] w-full">
-                <img src="https://www.eventsforgamers.com/wp-content/uploads/2021/11/Serious-Play-Conference.jpg" className="w-full" />
+                <img src="https://th.bing.com/th/id/R.0461cf981ccd77c830d91774e3f9af0c?rik=PGYntqZfmeHSxg&pid=ImgRaw&r=0" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
@@ -17,7 +17,7 @@ const Carousel = () => {
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative h-[90vh] w-full">
-                <img src="https://th.bing.com/th/id/R.0461cf981ccd77c830d91774e3f9af0c?rik=PGYntqZfmeHSxg&pid=ImgRaw&r=0" className="w-full" />
+                <img src="https://www.eventsforgamers.com/wp-content/uploads/2021/11/Serious-Play-Conference.jpg" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
                     <a href="#slide4" className="btn btn-circle">❯</a>
