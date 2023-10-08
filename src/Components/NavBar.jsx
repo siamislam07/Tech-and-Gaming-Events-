@@ -1,35 +1,52 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import Home from "./Home";
 // import '../App.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const NavBar = () => {
-    
+
+    const { user, logOut } = useContext(AuthContext)
+    // console.log(user.email);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const [navbar, setNavbar] = useState(false)
 
     const navLinks = <>
         <li><NavLink to='/' className="btn btn-outline btn-default pt-4 border-b-red-800 text-white border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Home</NavLink></li>
+        {user &&<>
+            <li><NavLink to='/tech' className="btn btn-outline btn-default pt-4 border-b-lime-600 text-white border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Tech</NavLink></li>
+            <li><NavLink to='/dashboard' className="btn btn-outline btn-default pt-4 border-b-lime-600 text-white border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">DashBoard</NavLink></li>
+        </> }
+        {user ? '' : <li><NavLink to='/login' className="btn btn-outline btn-default pt-2 border-b-amber-600 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Login</NavLink></li>}
+        {user ? '' : <li><NavLink to='/CreateAccount' className="btn btn-outline btn-default pt-2 border-b-amber-300 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Create Account</NavLink></li>}
+        {
+            user ?
+                <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src="https://i.ibb.co/wC75hKV/user.png" />
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64">
+                        <li>
+                            <a className="justify-between">
+                                Profile
+                                <span className="badge">{user?.email ? user.email : user?.displayName}</span>
+                            </a>
+                        </li>
 
-        <li><NavLink to='/login' className="btn btn-outline btn-default pt-2 border-b-amber-600 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Login</NavLink></li>
-        <li><NavLink to='/CreateAccount' className="btn btn-outline btn-default pt-2 border-b-amber-300 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Create Account</NavLink></li>
-        <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                    <img src="https://i.ibb.co/wC75hKV/user.png" />
+                        <li><a onClick={handleLogOut} className="">Logout</a></li>
+                    </ul>
                 </div>
-            </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li>
-                    <a className="justify-between">
-                        Profile
-                        <span className="badge">New</span>
-                    </a>
-                </li>
-                <li><a>Settings</a></li>
-                <li><a>Logout</a></li>
-            </ul>
-        </div>
+                : ''
+        }
 
     </>
 
