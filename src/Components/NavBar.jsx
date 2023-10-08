@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { Link, NavLink } from "react-router-dom";
 import Home from "./Home";
 // import '../App.css'
 import { useState } from "react";
 
 const NavBar = () => {
-
+    
     const [navbar, setNavbar] = useState(false)
 
     const navLinks = <>
@@ -12,6 +13,23 @@ const NavBar = () => {
 
         <li><NavLink to='/login' className="btn btn-outline btn-default pt-2 border-b-amber-600 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Login</NavLink></li>
         <li><NavLink to='/CreateAccount' className="btn btn-outline btn-default pt-2 border-b-amber-300 border-neutral normal-case text-lg text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:text-white">Create Account</NavLink></li>
+        <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                    <img src="https://i.ibb.co/wC75hKV/user.png" />
+                </div>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                    <a className="justify-between">
+                        Profile
+                        <span className="badge">New</span>
+                    </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+            </ul>
+        </div>
 
     </>
 

@@ -12,24 +12,33 @@ import Home from './Components/Home';
 import ErrorPage from './Components/ErrorPage';
 import CreateAccount from './Components/CreateAccount';
 
+import Details from './Components/details';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage/>,
-    children:[
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        loader: () =>fetch('/home-data.json'),
+        element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<Login></Login>,
+        path: '/login',
+        element: <Login></Login>,
       },
       {
-        path:'/CreateAccount',
-        element:<CreateAccount></CreateAccount>
+        path: '/CreateAccount',
+        element: <CreateAccount></CreateAccount>
+      },
+      {
+        path: '/details/:id',
+        element: <Details></Details>,
+        loader: ()=>fetch('/home-data.json')
+        
       }
     ]
   },
@@ -38,6 +47,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    
+      <RouterProvider router={router} />
+    
   </React.StrictMode>,
 )

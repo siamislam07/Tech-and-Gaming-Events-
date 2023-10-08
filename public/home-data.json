@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Tech Expo 2023",
+        "description": "Join us for the most exciting tech expo of the year. Explore the latest gadgets, innovations, and trends in technology. Dive into immersive demonstrations of cutting-edge virtual reality and witness live presentations by industry leaders. This is your chance to get hands-on with the future of technology.",
+        "image": "https://i.ibb.co/dM55d0N/Tech-Expo-2023.jpg"
+    },
+    {
+        "id": 2,
+        "title": "GameCon 2023",
+        "description": "GameCon is back with a bang! Get ready for three days of gaming, cosplay, and esports tournaments. Experience the thrill of competitive gaming, meet your favorite streamers, and participate in epic cosplay competitions. Whether you're a casual gamer or a hardcore esports fan, GameCon 2023 has something for everyone.",
+        "image": "https://i.ibb.co/C2byHGB/Game-Con-2023.jpg"
+    },
+    {
+        "id": 3,
+        "title": "VR World Summit",
+        "description": "Experience the future of virtual reality at the VR World Summit. Dive into immersive worlds like never before. Try out the latest VR headsets and interact with mind-blowing simulations. Learn from leading VR developers and enthusiasts. Don't miss this opportunity to be at the forefront of the VR revolution.",
+        "image": "https://i.ibb.co/J3dHkP6/VR-World-Summit.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Cybersecurity Conference",
+        "description": "Stay updated on the latest cybersecurity threats and solutions. Protect your digital world with insights from top cybersecurity experts. Discover the strategies to safeguard your data and privacy. This conference features interactive workshops, expert panels, and hands-on demonstrations of the latest security tools.",
+        "image": "https://i.ibb.co/hK17NDR/Cybersecurity-Conference.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Indie Game Showcase",
+        "description": "Discover hidden gems in the world of indie gaming. Meet indie developers and play their creations. Immerse yourself in unique and innovative gameplay experiences. From pixel art classics to cutting-edge 3D adventures, the Indie Game Showcase is a celebration of creativity and independent game development.",
+        "image": "https://i.ibb.co/Y8KT0yF/Indie-Game-Showcase.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Tech Talk Webinar",
+        "description": "Join industry experts as they discuss the future of technology. Gain insights and knowledge from thought leaders in fields like artificial intelligence, blockchain, and quantum computing. Whether you're a tech enthusiast or a business leader, the Tech Talk Webinar is your gateway to understanding the latest technological advancements.",
+        "image": "https://i.ibb.co/1004Z2t/Tech-Talk-Webinar.jpg"
+    }
+]
