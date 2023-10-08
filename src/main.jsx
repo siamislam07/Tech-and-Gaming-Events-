@@ -12,7 +12,12 @@ import Home from './Components/Home';
 import ErrorPage from './Components/ErrorPage';
 import CreateAccount from './Components/CreateAccount';
 
-import Details from './Components/details';
+import Details from './Details/Details';
+import Details2 from './Details/Details2';
+import Details3 from './Details/Details3';
+import Details4 from './Details/Details4';
+import Details5 from './Details/Details5';
+import Details6 from './Details/Details6';
 
 
 const router = createBrowserRouter([
@@ -23,7 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        loader: () =>fetch('/home-data.json'),
+        // loader: () => fetch('/home-data.json'),
         element: <Home></Home>
       },
       {
@@ -35,10 +40,41 @@ const router = createBrowserRouter([
         element: <CreateAccount></CreateAccount>
       },
       {
-        path: '/details/:id',
+        path: '/details/1',
         element: <Details></Details>,
-        loader: ()=>fetch('/home-data.json')
-        
+        loader: () => fetch('/home-data.json')
+
+      },
+      
+      {
+        path: '/details/2',
+        element: <Details2></Details2>,
+        loader: () => fetch('/home-data.json')
+
+      },
+      {
+        path: '/details/3',
+        element: <Details3></Details3>,
+        loader: () => fetch('/home-data.json')
+
+      },
+      {
+        path: '/details/4',
+        element: <Details4></Details4>,
+        loader: () => fetch('/home-data.json')
+
+      },
+      {
+        path: '/details/5',
+        element: <Details5></Details5>,
+        loader: () => fetch('/home-data.json')
+
+      },
+      {
+        path: '/details/6',
+        element: <Details6></Details6>,
+        loader: () => fetch('/home-data.json')
+
       }
     ]
   },
@@ -47,8 +83,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
-      <RouterProvider router={router} />
-    
+
+    <RouterProvider router={router} />
+
   </React.StrictMode>,
 )
