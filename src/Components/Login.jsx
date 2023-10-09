@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import { Result } from "postcss";
@@ -16,7 +16,8 @@ import { Result } from "postcss";
 const Login = () => {
     const [error, setError] = useState('')
     const [succes, setSuccess] = useState('')
-
+    const location = useLocation()
+    console.log(location);
     const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext)
 
     
@@ -33,6 +34,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
+                navigate(location?.state ? location.state : '/')
                 setSuccess(Swal.fire({
                     icon: 'success',
                     title: 'Great',
@@ -40,7 +42,6 @@ const Login = () => {
                     
                 }))
                 e.target.reset()
-                navigate('/')
             })
             .catch(error => {
                 console.log(error);
@@ -60,7 +61,7 @@ const Login = () => {
                     text: 'You Login successfully',
                     
                 }))
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error);
@@ -77,7 +78,7 @@ const Login = () => {
                     text: 'You Login successfully',
                     
                 }))
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error);
