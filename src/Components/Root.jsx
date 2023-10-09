@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const Root = () => {
     return (
-        <div>
+        <div className="scroll-smooth">
             <NavBar></NavBar>
             <Outlet></Outlet>
         </div>

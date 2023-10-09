@@ -6,13 +6,7 @@ import Swal from "sweetalert2";
 const Details2 = () => {
 
     const popup = () => {
-        // Swal.fire({
-        //     position: 'top-bottom',
-        //     icon: 'success',
-        //     title: 'Your work has been saved',
-        //     showConfirmButton: false,
-        //     timer: 1000
-        // })
+        
         Swal.fire({
             title: 'Are you sure?',
             text: "Want To Buy It",
@@ -25,7 +19,7 @@ const Details2 = () => {
             if (result.isConfirmed) {
                 Swal.fire(
                     'Thank You',
-                    'You will be notify ',
+                    'You will be notify via e-mail soon ',
                     'success'
                 )
             }

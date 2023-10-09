@@ -6,7 +6,8 @@ import 'aos/dist/aos.css';
 import Footer from './Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Details from '../Details/Details';
+import ScrollTopButton from './ScrollTopButton';
+// import Details from '../Details/Details';
 
 
 const Home = () => {
@@ -28,15 +29,11 @@ const Home = () => {
 
 
 
-    // {
-    //     card?.map(cards =>)
-    // }
 
-    // console.log(card[1]?.title);
 
 
     return (
-        <>
+        <div className='scroll-smooth'>
             <Carousel></Carousel>
             <h3 className="text-5xl text-center mt-28 italic mb-6 font-medium ">UpComing <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-violet-600 relative inline-block"><span className="relative text-white">Tech&Game Updates</span></span></h3>
             <div className='max-w-[1500px] md:max-w-[1050px] lg:max-w-[1500px] mx-auto mb-56 '>
@@ -175,9 +172,9 @@ const Home = () => {
             </div>
 
             <Footer></Footer>
+            <ScrollTopButton></ScrollTopButton>
 
-
-        </>
+        </div>
     );
 };
 

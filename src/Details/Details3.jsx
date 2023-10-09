@@ -24,7 +24,7 @@ const Details3 = () => {
             if (result.isConfirmed) {
                 Swal.fire(
                     'Thank You',
-                    'You will be notify ',
+                    'You will be notify via e-mail soon ',
                     'success'
                 )
             }
