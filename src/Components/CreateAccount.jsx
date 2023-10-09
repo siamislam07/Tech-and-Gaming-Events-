@@ -11,6 +11,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
 
 import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
 
 
 
@@ -33,10 +34,11 @@ const CreateAccount = () => {
     const handleRegister = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
-
+        const name = form.get('name')
+        const url = form.get('url')
         const email = form.get('email')
         const password = form.get('password')
-
+        console.log(url);
         if (password.length < 6 ) {
             setError('Password should be at least 6 characters or longer')
             return
@@ -56,6 +58,14 @@ const CreateAccount = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+
+                // update name
+                updateProfile(result.user,{
+                    displayName: name,
+                    photoURL : url
+                })
+                .then()
+                .catch()
                 navigate('/')
                 setSuccess(Swal.fire({
                     icon: 'success',
@@ -121,6 +131,7 @@ const CreateAccount = () => {
 
                         <div className="space-y-5">
                             <input className="w-9/12 h-10 px-3  rounded-md" type="name" name="name" placeholder="Your Name " />
+                            <input className="w-9/12 h-10 px-3  rounded-md" type="url" name="url" placeholder="Your PhotoUrl " />
 
                             <input className="w-9/12 h-10 px-3  rounded-md" type="email" required name="email" placeholder="Your Email Address" />
                             <input className="w-9/12 h-10 px-3  rounded-md" type="password" required name="password" placeholder="Your password " />

@@ -16,9 +16,10 @@ import { Result } from "postcss";
 const Login = () => {
     const [error, setError] = useState('')
     const [succes, setSuccess] = useState('')
+
+    const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext)
+
     
-    const { user, signIn, googleSignIn, githubSignIn } = useContext(AuthContext)
-    console.log(user?.photoURL);
     const navigate = useNavigate()
 
     const handlelogin = e => {
@@ -95,8 +96,8 @@ const Login = () => {
 
                         <div className="">
 
-                            <input className="w-9/12 h-10  mb-5 px-3 rounded-md" type="email" name="email" placeholder="Your Email Address" />
-                            <input className="w-9/12 h-10 px-3 mb-4 rounded-md" type="password" name="password" placeholder="Your password " />
+                            <input className="w-9/12 h-10  mb-5 px-3 rounded-md" type="email" name="email" required placeholder="Your Email Address" />
+                            <input className="w-9/12 h-10 px-3 mb-4 rounded-md" type="password" name="password" required placeholder="Your password " />
                             {
                                 error && <p className="text-white text-xl border border-red-300 w-3/5 mx-auto">{error}</p>
                             }

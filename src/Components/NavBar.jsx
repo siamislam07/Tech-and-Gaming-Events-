@@ -31,14 +31,14 @@ const NavBar = () => {
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src="https://i.ibb.co/wC75hKV/user.png" />
+                            <img src={user?.photoURL ?user.photoURL : 'https://i.ibb.co/wC75hKV/user.png'  } />
                         </div>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64">
                         <li>
                             <a className="justify-between">
                                 Profile
-                                <span className="badge">{user?.email ? user.email : user?.displayName}</span>
+                                <span className="badge">{user?.displayName ? user?.displayName : user?.email}</span>
                             </a>
                         </li>
 
