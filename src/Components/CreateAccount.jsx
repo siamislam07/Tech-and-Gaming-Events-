@@ -27,7 +27,7 @@ const CreateAccount = () => {
 
     const navigate = useNavigate()
 
-    console.log(error);
+    
 
     const { createUser, googleSignIn, githubSignIn } = useContext(AuthContext)
 
@@ -38,7 +38,7 @@ const CreateAccount = () => {
         const url = form.get('url')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(url);
+        
         if (password.length < 6 ) {
             setError('Password should be at least 6 characters or longer')
             return
@@ -57,7 +57,7 @@ const CreateAccount = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                
 
                 // update name
                 updateProfile(result.user,{
@@ -76,7 +76,7 @@ const CreateAccount = () => {
                 e.target.reset()
             })
             .catch(error => {
-                console.log(error);
+                
                 setError(error.message)
                 e.target.reset()
             })
@@ -95,7 +95,7 @@ const CreateAccount = () => {
                 }))
             })
             .catch(error => {
-                console.log(error);
+                
                 setError(error.message)
             })
     }
@@ -112,7 +112,7 @@ const CreateAccount = () => {
                 }))
             })
             .catch(error => {
-                console.log(error);
+                
                 setError(error.message)
             })
     }

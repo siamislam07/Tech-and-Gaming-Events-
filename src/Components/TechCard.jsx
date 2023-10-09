@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 const TechCard = ({ blog }) => {
     const { title, image_url, description } = blog;
@@ -10,7 +11,6 @@ const TechCard = ({ blog }) => {
                         <h2 className="card-title text-3xl font-mono">{title}</h2>
                         <p className="text-xl ">
                             {description}
-
                         </p>
 
                     </div>

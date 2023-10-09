@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C
 
-<i>In this code there firstly declare a variable count with value zero then declare another variable with value of array then it run a forEach loop it will loop the array also there is a condition that, if the (num)-parameter/variable is true then it will increase the value with +1 . so it will take the zero firstly but zero is falsy then it will check 1 it is true so it will put the value in count by doing that at last it put 3 in the count variable so the answer it `3` </i>
+<i>In this code there firstly declare a variable count with value zero then declare another variable with value of array then it run a forEach loop it will loop the array also there is a condition that, if the (num)-parameter/variable is true then it will increase the value with +1 . so it will take the zero firstly but zero is falsy then it will check 1 it is true so it will put the value in count by doing that at last it put 3 in the count variable so the answer is `3` </i>
 
 </p>
 </details>

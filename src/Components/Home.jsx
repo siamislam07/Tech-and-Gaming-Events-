@@ -14,7 +14,7 @@ const Home = () => {
 
     const [card, setCard] = useState([])
 
-    // console.log(card);
+    
 
     useEffect(() => {
         fetch('./home-data.json')
