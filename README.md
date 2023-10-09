@@ -1,6 +1,6 @@
 # Tech and Gaming Events 🎮
 
-live link - 
+live link -  https://tech-and-gaming-event-63071.web.app/
 
 # My Project Feature
 - From navbar user can go to login page and register page for login and register
